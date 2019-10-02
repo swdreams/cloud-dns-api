@@ -1,3 +1,11 @@
 .login-body{
 	margin-top: 200px;
 }
+
+.alert ul{
+	margin-bottom: 0px;
+}
+#flash-messages{
+	max-height: 100px;
+	overflow-y: auto;
+}

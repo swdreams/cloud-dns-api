@@ -12,12 +12,12 @@ class Dashboard extends MY_Controller
 
 	public function index()
 	{
-		$data = array();
+		$zones_stats = $this->cloudns_sdk->dnsGetZonesStatistics();
+		$this->load->vars('zones_stats', $zones_stats);
 
-		$list = $this->cloudns_sdk->dnsAvailableNameServers();
+		$name_servers = $this->cloudns_sdk->dnsAvailableNameServers();
+		$this->load->vars('name_servers', $name_servers);
 
-
-		$this->load->vars('dns_list', $list);
 		$this->layout->view('dashboard');
 	}
 

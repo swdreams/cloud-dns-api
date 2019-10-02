@@ -9,6 +9,8 @@ class MY_Controller extends CI_Controller
     protected $sector_breadcrumb = array();
     protected $bahagian_breadcrumb = array();
 
+    protected $limit = 20;
+
     function __construct()
     {
         parent::__construct();

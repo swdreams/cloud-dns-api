@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('ClouDNS_SDK', 'session', 'dns_auth', 'layout');
+$autoload['libraries'] = array('ClouDNS_SDK', 'session', 'dns_auth', 'layout', 'flash');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'language');
+$autoload['helper'] = array('url', 'language', 'form', 'global');
 
 /*
 | -------------------------------------------------------------------
@@ -103,7 +103,7 @@ $autoload['helper'] = array('url', 'language');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array('cloud_dns', 'users');
+$autoload['config'] = array('cloud_dns', 'users', 'flash');
 
 /*
 | -------------------------------------------------------------------

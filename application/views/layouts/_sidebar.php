@@ -14,7 +14,7 @@
 
 	<!-- Nav Item - Dashboard -->
 	<li class="nav-item">
-		<a class="nav-link" href="index.html">
+		<a class="nav-link" href="<?php echo site_url('/') ?>">
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Dashboard</span></a>
 	</li>
@@ -24,25 +24,48 @@
 
 	<!-- Heading -->
 	<div class="sidebar-heading">
-		Interface
+		DNS zones
 	</div>
 
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
-		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-		   aria-expanded="true" aria-controls="collapseTwo">
-			<i class="fas fa-fw fa-cog"></i>
-			<span>Components</span>
-		</a>
-		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-			<div class="bg-white py-2 collapse-inner rounded">
-				<h6 class="collapse-header">Custom Components:</h6>
-				<a class="collapse-item" href="buttons.html">Buttons</a>
-				<a class="collapse-item" href="cards.html">Cards</a>
-			</div>
-		</div>
+		<a class="nav-link" href="<?php echo site_url('/zone/index') ?>">
+			<i class="fas fa-fw fa-list"></i>
+			<span>DNS zones</span></a>
+
+		<a class="nav-link" href="<?php echo site_url('/cloud_domain/change_form') ?>">
+			<i class="fas fa-fw fa-edit"></i>
+			<span>Change Cloud Master</span></a>
 	</li>
 
+	<hr class="sidebar-divider">
+
+
+	<div class="sidebar-heading">
+		Cloud Domains
+	</div>
+
+	<!-- Nav Item - Pages Collapse Menu -->
+	<li class="nav-item">
+		<a class="nav-link" href="<?php echo site_url('/cloud_domain/index') ?>">
+			<i class="fas fa-fw fa-list"></i>
+			<span>Cloud Domains List</span></a>
+
+		<a class="nav-link" href="<?php echo site_url('/cloud_domain/add') ?>">
+			<i class="fas fa-fw fa-edit"></i>
+			<span>Add a Cloud Domain</span></a>
+	</li>
+
+	<hr class="sidebar-divider">
+	<div class="sidebar-heading">
+		Name Servers
+	</div>
+	<li class="nav-item">
+		<a class="nav-link" href="<?php echo site_url('/name_server/index') ?>">
+			<i class="fas fa-fw fa-list"></i>
+			<span>DNS Servers List</span></a>
+	</li>
+	<?php /*
 	<!-- Nav Item - Utilities Collapse Menu -->
 	<li class="nav-item">
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -104,6 +127,8 @@
 			<i class="fas fa-fw fa-table"></i>
 			<span>Tables</span></a>
 	</li>
+	*/ ?>
+
 
 	<!-- Divider -->
 	<hr class="sidebar-divider d-none d-md-block">
@@ -112,6 +137,5 @@
 	<div class="text-center d-none d-md-inline">
 		<button class="rounded-circle border-0" id="sidebarToggle"></button>
 	</div>
-
 </ul>
 <!-- End of Sidebar -->

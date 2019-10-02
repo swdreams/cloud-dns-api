@@ -55,7 +55,12 @@ class ClouDNS_SDK
 
 		curl_close($init);
 
-		return json_decode($content, true);
+		$json = json_decode($content, true);
+
+		// Add a helper message here.
+		//add_flahs_msg($json);
+
+		return $json;
 	}
 
 	public function apiLogin()

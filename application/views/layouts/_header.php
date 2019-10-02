@@ -17,5 +17,7 @@
 	<link href="<?php echo base_url("assets/dns/css/sb-admin-2.css") ?>" rel="stylesheet">
 	<link href="<?php echo base_url("assets/style.css") ?>" rel="stylesheet">
 
+	<script src="<?php echo base_url("assets/jquery/jquery-3.4.1.min.js") ?>"></script>
+
 	<title>Dashboard</title>
 </head>
