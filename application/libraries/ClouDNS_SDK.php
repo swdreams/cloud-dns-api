@@ -70,6 +70,13 @@ class ClouDNS_SDK
 		return $this->apiRequest(false, $url);
 	}
 
+	public function getMyIp()
+	{
+		$url = 'ip/get-my-ip';
+
+		return $this->apiRequest(false, $url);
+	}
+
 	public function dnsRegisterDomainZone($domain_name, $zone_type, $ns = false, $master_ip = false)
 	{
 

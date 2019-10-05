@@ -1,16 +1,30 @@
-<!-- DataTales Example -->
-<!-- Page Heading -->
+
+<!-- Page level custom scripts -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dataTable').DataTable({
+			select: false,
+            "order": [[ 0, 'asc' ], [ 1, 'asc' ]],
+            "pageLength": 10,
+            "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+		});
+    });
+</script>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
 	<h1 class="h3 mb-0 text-gray-800">
 		Cloud Domain List
-		<?php if ($total_count > 0) {echo " (". number_format($total_count, 0) . ")";} ?>
+		<?php if ($total_count > 0) {
+			echo " (" . number_format($total_count, 0) . ")";
+		} ?>
 	</h1>
 	<a href="<?php echo site_url('/cloud_domain/add') ?>"
 	   class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-		<i class="fas fa-download fa-sm text-white-50"></i> Add
+		<i class="fas fa-plus fa-sm"></i> Add
 	</a>
 </div>
+<?php
+?>
 <div class="card shadow mb-2">
 	<div class="card-body">
 		<div class="row">
@@ -18,20 +32,23 @@
 				<?php echo form_open('/cloud_domain', array(
 					'class' => 'form-inline'
 				)) ?>
-				<label for="zone" class="mr-sm-2">DNS Zone:</label>
+				<label for="zone" class="mr-sm-2">Cloud Master Domain:</label>
 				<?php echo form_dropdown(array(
 					'name' => 'zone',
 					'id' => 'zone',
 					'class' => 'form-control mr-sm-3',
-					'onChange' => '$(this).closest(\'form\').submit()',
+					//'onChange' => '$(this).closest(\'form\').submit()',
 				), $zones, $selected_zone) ?>
 				<!--<label for="zone" class="mr-sm-2">Domain Name:</label>
 				<?php /*echo form_input(array(
 					'name' => 'zone_search',
 					'id' => 'zone_search',
 					'class' => 'form-control mr-sm-3'
-				)); */?>
-				<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>-->
+				)); */ ?> -->
+				<button type="submit" class="btn btn-primary mr-4"><i class="fa fa-search"></i> Search</button>
+				<button type="submit" name="download_csv" value="download_csv" class="btn btn-primary"><i
+						class="fa fa-download"></i> Download as CSV
+				</button>
 				<?php echo form_close() ?>
 			</div>
 		</div>
@@ -55,7 +72,7 @@
 				foreach ($domains as $row) {
 					?>
 					<tr>
-						<td class="text-center"><?php echo $ind ++ ?></td>
+						<td class="text-center"><?php echo $ind++ ?></td>
 						<td class="text-center">
 							<a href="<?php echo site_url("cloud_domain") ?>"><?php echo $row ?></a>
 						</td>

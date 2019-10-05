@@ -2,6 +2,14 @@
 
 class MY_Controller extends CI_Controller
 {
+	const SUCCESS = 'success';
+	const ERROR = 'error';
+	const BULK_MSG_LIMIT = 20;
+
+
+    protected $limit = 100;
+    protected $ses_key = '';
+
     protected $data = array();
     protected $dashboard_breadcrumb = array();
     protected $pelanstrategik_breadcrumb = array();
@@ -9,7 +17,6 @@ class MY_Controller extends CI_Controller
     protected $sector_breadcrumb = array();
     protected $bahagian_breadcrumb = array();
 
-    protected $limit = 20;
 
     function __construct()
     {

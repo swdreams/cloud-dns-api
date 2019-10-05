@@ -18,6 +18,12 @@ class Dashboard extends MY_Controller
 		$name_servers = $this->cloudns_sdk->dnsAvailableNameServers();
 		$this->load->vars('name_servers', $name_servers);
 
+//		$my_ip = $this->cloudns_sdk->getMyIp();
+//		if (!isset($my_ip['status']) && !empty($my_ip)) {
+//			$my_ip = $my_ip[0];
+//		}
+//		$this->load->vars('my_ip', $my_ip);
+
 		$this->layout->view('dashboard');
 	}
 

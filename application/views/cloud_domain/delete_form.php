@@ -1,21 +1,11 @@
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-	<h1 class="h3 mb-0 text-gray-800">Add Cloud Domains</h1>
+	<h1 class="h3 mb-0 text-gray-800">Delete Cloud Domains</h1>
 </div>
 
 <div class="card shadow">
 	<div class="card-body">
-		<?php echo form_open('/cloud_domain/add', array('class'=>'user')) ?>
-			<div class="form-group row">
-				<label for="staticEmail" class="offset-2 col-sm-2 col-form-label">Master Cloud Domain</label>
-				<div class="col-sm-6">
-					<?php echo form_dropdown(array(
-						'name' => 'zone',
-						'class' => 'form-control',
-						'required' => 'required',
-					), $zones, '') ?>
-				</div>
-			</div>
+		<?php echo form_open('/cloud_domain/delete_form', array('class'=>'user')) ?>
 			<div class="form-group row">
 				<label for="inputPassword" class="offset-2 col-sm-2 col-form-label">Cloud Domains</label>
 				<div class="col-sm-6">
